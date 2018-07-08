@@ -4,35 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style type="text/css">
-        .list {
-            padding: 0;
-            list-style-type: none;
-        }
-        .list li {
-            margin-left: 20px;
-            margin-bottom: 10px;
-            font-size: 24px;
-        }
-        .delete {
-            margin-right: 10px;
-            color: red;
-            text-decoration-line: none;
-        }
-        .text {
-            padding: 5px;
-            font-size: 18px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="body">
     <div class="container">
-        <h1>代辦事項</h1>
-        <input type="text" class="text" placeholder="請輸入內容">
-        <input type="button" class="btn" value="新增">
-        <ul class="list"></ul>
+        <div class="todolist">
+                <h1>ToDoList</h1>
+                <div class="add">
+                    <input type="text" class="text" placeholder="請輸入代辦事項">
+                    <input type="button" class="btn btn btn-success" value="New">
+                </div>
+                <ul class="list"></ul>
+        </div>
     </div>
 
 </body>

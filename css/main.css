@@ -1,0 +1,79 @@
+body {
+    background-image: url(../img/todolist.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.todolist {
+    margin: 0 auto;
+    width: 600px;
+}
+.todolist h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 60px;
+    color: #000;
+}
+.todolist .add {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.todolist .text {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+.list {
+    position: relative;
+    padding: 0;
+    list-style-type: none;
+    background-color: #f5eee3c9;
+    border-radius: 10px;
+}
+.list li {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid grey;
+    font-size: 32px;
+}
+.btn {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.edit, .delete {
+    font-size: 26px;
+    color: #343a40;
+    float: right;
+}
+.addInput {
+    display: none;
+    position: absolute;
+    width: 80%;
+    transform: translate(4% , 10%);
+    font-size: 32px;
+}
+@media screen and (max-width: 768px) {
+    .todolist {
+        width: 100%;
+    }
+    .todolist .text {
+        font-size: 18px;
+    }
+    .addInput {
+        width: 70%;
+    }
+    .btn {
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 321px) {
+    .todolist {
+        width: 300px;
+    }
+    .addInput {
+        width: 65%;
+    }
+}

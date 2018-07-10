@@ -2,6 +2,7 @@ var ary = JSON.parse(localStorage.getItem("thing")) || [];
 var btn = document.querySelector('.btn');
 var text = document.querySelector('.text');
 var list = document.querySelector('.list');
+//繪製清單
 function update(){
     var str = "";
     for(i=0;i<ary.length;i++){
@@ -9,6 +10,7 @@ function update(){
     }
     list.innerHTML = str;
 }
+//新增清單
 function checkAdd(){
     if(text.value !== ""){
         ary.push(text.value);
@@ -17,6 +19,7 @@ function checkAdd(){
         localStorage.setItem("thing", JSON.stringify(ary));
     }
 }
+//刪除清單
 function checkDelete(e){
     if(e.target.nodeName == "I" && e.target.className == "icon-trash-empty delete"){
         e.preventDefault();
@@ -25,6 +28,7 @@ function checkDelete(e){
         localStorage.setItem("thing", JSON.stringify(ary));
     }
 }
+//開啟編輯清單
 function checkEdit(e){
     if(e.target.nodeName == "I" && e.target.className == "icon-pencil edit"){
         e.preventDefault();
@@ -39,6 +43,7 @@ function checkEdit(e){
         },false);
     }
 }
+//關閉編輯清單並更新
 function editUpdate(e){
     e.target.style.display = "none";
     num = e.target.nextElementSibling.dataset.num;
@@ -46,6 +51,7 @@ function editUpdate(e){
     update();
     localStorage.setItem("thing", JSON.stringify(ary));
 }
+//初始化
 update();
 btn.addEventListener('click',checkAdd,false);
 list.addEventListener('click',checkDelete,false);
